@@ -3,7 +3,8 @@ import { OfferConveniences } from './offer-conveniences.enum';
 import { OfferType } from './offer-types.enum';
 import { Photo } from './photo.type';
 import { User } from './user.type';
-
+import { OfferFlag } from './offer-flag.enum';
+import { OfferCoordinates } from './offer-coordinates.enum';
 
 export type Offer = {
   title: string;
@@ -12,7 +13,7 @@ export type Offer = {
   city: OfferCity;
   previewPath: string;
   photosPath: Photo[];
-  flag: string;
+  flagOffer: OfferFlag;
   rating: number;
   type: OfferType;
   rooms: number;
@@ -21,5 +22,5 @@ export type Offer = {
   conveniences: OfferConveniences[];
   user: User;
   comments: number;
-  location: string;
+  location: OfferCoordinates;
 }
